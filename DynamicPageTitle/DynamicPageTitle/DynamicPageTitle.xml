@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="DynamicPageTitle.widget.DynamicPageTitle" needsEntityContext="true" offlineCapable="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Dynamic Page Title</name>
+    <description>Sets the page title based on the return value of a micro/nano flow</description>
+    <icon></icon>
+    <properties>
+       <property key="callEvent" type="enumeration" defaultValue="callMicroflow">
+            <caption>Flow type</caption>
+            <category>Behavior</category>
+            <description/>
+            <enumerationValues>
+                <enumerationValue key="callMicroflow">Microflow</enumerationValue>
+                <enumerationValue key="callNanoflow">Nanoflow</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="microflow" type="microflow" required="false">
+            <caption>Microflow</caption>
+            <category>Behavior</category>
+            <description>The microflow to be executed. The result will be used as title.</description>
+            <returnType type="String"/>
+        </property>
+        <property key="nanoflow" type="nanoflow" required="false">
+            <caption>Nanoflow</caption>
+            <category>Behavior</category>
+            <description>The nanoflow to be executed. The result will be used as title.</description>
+            <returnType type="String"/>
+        </property>
+    </properties>
+</widget>
